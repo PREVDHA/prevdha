@@ -10,7 +10,7 @@ export default function Contacts() {
     useEffect(() => {
         const load = async () => {
             try {
-                const res = await fetch('/api/contacts');
+                const res = await fetch('https://prevdha.onrender.com/api/contacts');
                 const data = await res.json();
                 setContacts(data);
             } catch (e) {
@@ -29,7 +29,7 @@ export default function Contacts() {
         const sanitized = phone.replace(/[^0-9+]/g, '');
         setSubmitting(true);
         try {
-            const res = await fetch('/api/contacts', {
+            const res = await fetch('https://prevdha.onrender.com/api/contacts', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name: name.trim(), phone: sanitized })
