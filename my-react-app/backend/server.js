@@ -1,13 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
+const path = require("path");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-const CONTACTS_FILE = "./contacts.json";
+const CONTACTS_FILE = path.join(__dirname, "contacts.json");
 
 // In-memory storage for latest location (could be extended per-session/user)
 let latestLocation = null;
