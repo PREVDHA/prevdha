@@ -14,7 +14,7 @@ function App() {
         const loc = `Lat:${pos.coords.latitude}, Lon:${pos.coords.longitude}`;
 
         try {
-          const res = await fetch('/api/alert', {
+          const res = await fetch('https://prevdha.onrender.com/api/alert', {
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -46,7 +46,7 @@ function App() {
       // still attempt to send alert without location
       (async () => {
         try {
-          const res = await fetch('/api/alert', {
+          const res = await fetch('https://prevdha.onrender.com/api/alert', {
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -136,7 +136,7 @@ function App() {
       const timestamp = pos.timestamp;
 
       try {
-        await fetch('/api/location', {
+        await fetch('https://prevdha.onrender.com/api/location', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ latitude, longitude, timestamp })
