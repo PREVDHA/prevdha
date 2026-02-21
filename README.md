@@ -69,14 +69,14 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-[img1.png]
+![Front / Landing](images/img1.png)
 This is the front or starting page of the site.
 
-[img2.png]
+![Alert & Recording](images/img2.png)
 When the code is typed alert is sent and voice starts getting recorded.
 
-[img3.png]
-the alert is sent to the person's saved contact.
+![Alert Sent](images/img3.png)
+The alert is sent to the person's saved contact.
 
 #### Diagrams
 The UI is like a simple calculator and can do simple maths. But when the secret code is typed is a alert message is immediately sent into the saved contacts and starts recording , also the location is also sent to the saved person.the architecture flow is easy the frontend is develeped by javascript ,  css , html wheras the backend ia by react.bith of the are intergrated by index.html file in the frontend folder. the only api used is for connecting whatsapp api. where as most of the files are imported from file to file for smooth work flow.
